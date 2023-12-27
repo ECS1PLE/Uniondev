@@ -1,0 +1,33 @@
+.button_animate::before {
+    content: '';
+      border-radius: 1000px;
+      min-width: 100%;
+      box-shadow: 0 0 20px #2B63D9;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+    
+  .button_animate:hover, .button:focus {
+      color: white;
+      transform: translateY(-7px);
+      border-radius:50px;
+  }
+    
+  .button_animate:hover::before, button:focus::before {
+      opacity: 1;
+  }
+    
+  .button_animate::after {
+      content: '';
+      width: 5px; 
+      height: 6px;
+      border-radius: 100%;
+      position: absolute;
+      z-index: -1;
+      top: 0%;
+      left: 0%;
+      transform: translate(-50%, -50%);
+  }
